@@ -12,6 +12,7 @@ runs:
   using: "composite"
   steps:
     - name: Install dependencies
+      working-directory: ${{ inputs.base-dir }}
       run: mix deps.get
       shell: bash
 
