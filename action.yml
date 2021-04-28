@@ -1,5 +1,5 @@
 name: 'Elixir Checks'
-descriptions: 'Run typical checks'
+description: 'Run typical checks'
 branding:
   icon: 'check-square'
   color: 'green'
