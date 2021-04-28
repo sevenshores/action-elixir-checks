@@ -1,5 +1,8 @@
 name: 'Elixir Checks'
 descriptions: 'Run typical checks'
+branding:
+  icon: 'check-square'
+  color: 'green'
 inputs:
   base-dir:
     description: 'Mix app directory'
@@ -22,6 +25,12 @@ runs:
     - name: Compile app
       working-directory: ${{ inputs.base-dir }}
       run: mix compile
+
+    - name: Compile app for test
+      working-directory: ${{ inputs.base-dir }}
+      run: mix compile
+      env:
+        MIX_ENV: test
 
     - name: Run Credo
       working-directory: ${{ inputs.base-dir }}
